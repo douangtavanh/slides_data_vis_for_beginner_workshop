@@ -1,0 +1,625 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Data Vis Workshop</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/white.css">
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+        <!--				Title slide-->
+        <section data-background-color="#75E6DA">
+            <h1>Data Visualisation for Beginners Workshop</h1>
+            <p><span style="background-color: white; color: #75E6DA">Explore & Create Meaningful Visualisations</span></p>
+        </section>
+        <!--				About Speaker-->
+        <section>
+            <h3>About Speaker</h3>
+            <img src="images/speaker.jpg" alt="Speaker" class="r-stretch" id="speaker-image"
+                 style="border-radius: 50%;">
+            <p>Douangtavanh Kongphaly</p>
+            <p><span style="background-color: rgba(117, 230, 218, 30%)">A data analyst who codes, visualizes and
+						does statistically stuff on complex issues.</span></p>
+            <!--					<p>LEGO, Records️, Boardgames, 🎬,  ☕, 🍺.</p>-->
+            <a href="https://douangtavanh.com">douangtavanh.com</a>
+        </section>
+        <!--				Agenda-->
+        <section>
+            <section>
+                <h1>Agenda</h1>
+                <p class="r-fit-text"><b>Session 1: Introduction to Data Visualisation (50 mins)</b></p>
+                <ul>
+                    <li><span style="color: #75E6DA">Introduction</span> to Data Visualisation</li>
+                    <li><span style="color: #75E6DA">Types</span> of Data Visualisation</li>
+                    <li><span style="color: #75E6DA">Elements</span> of Data Visualisation</li>
+                </ul>
+            </section>
+            <section data-background-color="#ef7c8e">
+                <h1>Break 10 mins</h1>
+            </section>
+            <section>
+                <h1>Agenda</h1>
+                <p class="r-fit-text"><b>Session 2: Hand-on exercise (60 mins)</b></p>
+                <ul>
+                    <li>Data Processing Workflow</li>
+                    <li>Data visualisation review and best practices</li>
+                    <li>Showcase visualisations</li>
+                    <li>Hand-on exercise</li>
+                </ul>
+            </section>
+        </section>
+        <section data-background-color="#75E6DA">
+            <h1>
+                <span class="r-fit-text" style="background-color: #189ab4; color: white">Why is </span>
+                <span style="background-color: white; color: #75E6DA">Data Visualisation </span>
+                <span class="r-fit-text" style="background-color: #05445e; color: white">Important?</span>
+            </h1>
+        </section>
+        <!--				Why is Data Visualisation Important?-->
+        <section>
+            <h1 class="r-fit-text">Why is Data Visualisation Important?</h1>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/xekEXM0Vonc?si=7wgW88VJiih-nnrV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+
+<!--        John Snow story-->
+        <section data-background-color="#75E6DA">
+            <h1>
+                A brief history of <span style="background-color: white; color: #75E6DA">Data Visualisation</span>
+            </h1>
+        </section>
+        <section>
+            <section>
+                <p>John Snow: Cholera cases in 1854</p>
+                <img src="images/John_Snow.jpg" alt="John Snow"
+                     class="r-stretch">
+                <p class="r-fit-text">
+                    John Snow (1813-1858) was a British physician and a pioneer in the field of anaesthesia and
+                    medical hygiene. He is best known for his work in tracing the source of a cholera outbreak in
+                    Soho, London, in 1854.
+                </p>
+                <a href="https://en.wikipedia.org/wiki/John_Snow" style="font-size: small">Wikipedia, John Snow</a>
+            </section>
+            <section>
+                <p>Not This Jon Snow</p>
+                <img src="images/Jon_Snow_Season_8.png" alt="John Snow GOT"
+                     class="r-stretch">
+            </section>
+            <section>
+                <p>John Snow: Cholera cases in 1854</p>
+                <img src="images/Snow-cholera-map-1.jpg" alt="Cholera map"
+                     class="r-stretch" data-preview-image="">
+                <p>
+                    <a href="https://en.wikipedia.org/wiki/John_Snow" style="font-size: medium">Wikipedia, John Snow</a>
+                </p>
+            </section>
+        </section>
+
+<!--        Anscombe's quartet-->
+        <section>
+            <section>
+                <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSnrrC8GjWtBlFa7kkIVzVscbBNmgNkwTpu1A-7F-fzocwMVq1Pi0RqiFokLg75gT9lo0LEqZQG4fCc/pubhtml?gid=0;single=true;widget=true;headers=false"
+                        width="940" height="540"></iframe>
+                <a style="font-size: medium"
+                   href="https://docs.google.com/spreadsheets/d/1tNXxgi9kFvSvhNxTV8H8GiihosMODRtY3RFnM_GU2d0/edit?usp=sharing"
+                   data-preview-link>
+                    <p>Click here to see the data</p>
+                </a>
+                <p style="font-size: medium">
+                    <a href="https://en.wikipedia.org/wiki/Anscombe%27s_quartet">Wikipedia, Anscombe's quartet</a>
+                </p>
+            </section>
+            <section>
+                <img src="images/Anscombe's_quartet_3.svg" alt="Anscombe's quartet"
+                     class="r-stretch" data-preview-image>
+                <p style="font-size: medium">
+                    <a href="https://en.wikipedia.org/wiki/Anscombe%27s_quartet">Wikipedia, Anscombe's quartet</a>
+                </p>
+            </section>
+        </section>
+<!--        Type of charts-->
+        <section data-background-color="#75E6DA">
+            <h1>
+                <span class="r-fit-text" style="background-color: #189ab4; color: white">Types of </span>
+                <span style="background-color: white; color: #75E6DA">Data Visualisation</span>
+            </h1>
+        </section>
+        <section>
+            <img src="images/select-the-right-vis.jpg" alt="Select the right visualisation"
+                class="r-stretch" data-preview-image>
+            <p style="font-size: medium">
+                <a href="https://www.sap.com/documents/2022/01/5e49ac93-127e-0010-bca6-c68f7e60039b.html">SAP Analytics Cloud, Data Visualization Handbook</a>
+            </p>
+        </section>
+<!--        Chart: Change over time-->
+        <section>
+            <h3>Change over time</h3>
+            <div style="display: flex; flex-direction: row;">
+                <div style="width: 30%">
+                    <p class="r-fit-text" style="text-align: justify">Shows how a measure changes over time, and
+                        allows you to highlight temporal trends.</p>
+                    <p class="r-fit-text">Common use cases:</p>
+                    <ul class="r-fit-text">
+                        <li>Sales over time</li>
+                        <li>Stock price over time</li>
+                        <li>Temperature over time</li>
+                    </ul>
+                </div>
+                <div style="width: 70%;">
+                    <img src="images/type_chart_change_over_time.png" alt="Change over time"
+                         style="max-width: 70%"
+                         data-preview-image>
+                </div>
+            </div>
+        </section>
+<!--        Chart: Category comparison-->
+        <section>
+            <h3>Category comparison</h3>
+            <div style="display: flex;">
+                <div style="max-width: 30%; font-size: 2rem">
+                    <p class="r-fit-text" style="text-align: justify">Shows the comparison of categorical values
+                        where the data does not have any intrinsic order,
+                        for example, a list of products.</p>
+                    <p class="r-fit-text">Common use cases:</p>
+                    <ul class="r-fit-text">
+                        <li>Income across different countries</li>
+                        <li>Popular venue times</li>
+                        <li>Sales by product</li>
+                    </ul>
+                </div>
+                <div style="max-width: 70%;">
+                    <img src="images/type_chart_category_comparison.png" alt="Change over time"
+                         style="max-width: 70%"
+                         data-preview-image>
+                </div>
+            </div>
+        </section>
+        <!--        Chart: Ranking-->
+        <section>
+            <h3>Ranking</h3>
+            <div style="display: flex; font-size: 2rem">
+                <div style="width: 30%">
+                    <p style="text-align: justify;">Shows the top or bottom N values to emphasize
+                        the largest, or smallest values.</p>
+                </div>
+                <div style="width: 70%;">
+                    <img src="images/type_chart_ranking.png" alt="Change over time"
+                         style="max-width: 70%"
+                         data-preview-image>
+                </div>
+            </div>
+        </section>
+        <!--        Chart: Part-to-Whole-->
+        <section>
+            <h3>Part-to-Whole</h3>
+            <div style="display: flex; font-size: 2rem">
+                <div style="width: 30%">
+                    <p class="r-fit-text" style="text-align: justify">Shows how the categories contribute to the
+                        whole value.</p>
+                    <p class="r-fit-text">Common use cases:</p>
+                    <ul>
+                        <li>Gender</li>
+                        <li>Budget</li>
+                        <li>Market share</li>
+                    </ul>
+                </div>
+                <div style="width: 70%;">
+                    <img src="images/type-chart-part-to-whole.png" alt="Change over time"
+                         style="max-width: 70%"
+                         data-preview-image>
+                </div>
+            </div>
+        </section>
+<!--        Chart: Correlation-->
+        <section>
+            <h3>Correlation</h3>
+            <div style="font-size: 2rem">
+                <p>Show the correlation between two indicators
+                    or more.</p>
+                <p>Common use cases: Correlation between Work experiences and Income, Sales and Costs,
+                    GDP and life expectancy</p>
+                </ul>
+                <img src="images/type-chart-correlation.png" alt="Change over time"
+                     data-preview-image>
+            </div>
+        </section>
+<!--        Chart: Distribution-->
+        <section>
+            <h3>Distribution</h3>
+            <div style="font-size: 2rem">
+                <p>Show the distribution of a measure across
+                    different categories.</p>
+                <p>Common use cases: Age distribution, Income distribution, Sales distribution</p>
+                <img src="images/type-chart-distribution.png" alt="Change over time"
+                     data-preview-image>
+            </div>
+        </section>
+<!--        Chart: Flow-->
+        <section>
+            <h3>Flow</h3>
+            <div style="font-size: 2rem">
+                <p>Show the flow of a measure across different
+                    categories.</p>
+                <p>Common use cases: Sales by product and region, Website traffic by source, Customer journey
+                    analysis.</p>
+                <img src="images/type-chart-flow.png" alt="Change over time"
+                     data-preview-image>
+            </div>
+        </section>
+<!--        Chart: Geographical Information System (GIS) aka Maps-->
+        <section>
+            <h3><span style="font-weight: bold; color: #75E6DA">G</span>eographical
+                <span style="font-weight: bold; color: #75E6DA">I</span>nformation
+                <span style="font-weight: bold; color: #75E6DA">S</span>ystem
+                aka Maps
+            </h3>
+            <div style="font-size: 2rem">
+                <p>Show the geographical distribution of a
+                    measure.</p>
+                <p>Common use cases: Sales by region, Population density, and Weather patterns.</p>
+                <div style="display: flex; flex-direction: row; justify-content: space-around">
+                    <img src="images/laos_map_srtm_rendered_public.webp" alt="Lao Map SRTM"
+                         style="max-width: 350px;"
+                         data-preview-image>
+                    <img src="images/laos_map_lecs_survey.png" alt="Lao Map LEC Survey"
+                         style="max-width: 550px;"
+                         data-preview-image>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <p>Cheat sheet</p>
+            <img src="images/poster_big.png" alt="Poster" data-preview-image>
+        </section>
+
+        <section data-background-color="#75E6DA">
+            <h1>Elements of Data Visualisation</h1>
+        </section>
+
+        <section>
+            <h3>Type of Data</h3>
+            <ul>
+                <li>Continuous: decimal, integer, GDP, number of population…</li>
+                <li>
+                    Ordinal: best-moderate-worse, high-low…
+                </li>
+                <li>
+                    Category: Province, Colour, Sex
+                </li>
+                <li>
+                    Time series: date, time, year, month, day
+                </li>
+                <li>
+                    Geo-spatial: latitude, longitude, country, province
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Data Types</h3>
+            <ul>
+                <li>Numeric: integer, decimal</li>
+                <li>Character: string, text</li>
+                <li>Logical: boolean, true/false</li>
+                <li>Date/time: date, time, datetime</li>
+                <li>Factor: categorical variable</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Dataset Format</h3>
+            <ul>
+                <li>
+                    Text: CSV, TSV, JSON, XML, HTML
+                </li>
+                <li>
+                    Specialised: Excel, SPSS, SAS, Stata
+                </li>
+                <li>
+                    Database: SQL, NoSQL
+                </li>
+                <li>
+                    API: REST, GraphQL
+                </li>
+                <li>
+                    Big data: Hadoop, Spark
+                </li>
+                <li>
+                    Other: PDF, Image, Video, hard copy
+                </li>
+
+            </ul>
+        </section>
+
+        <section>
+            <section>
+                <h3>Data Format</h3>
+                <ul>
+                    <li>Long format: each row is a single observation</li>
+                    <li>Wide format: each row is a single subject</li>
+                    <li>Hierarchical format: data is nested within other data</li>
+                    <li>Time series format: data is ordered by time</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Table Structure</h3>
+                <img src="images/long_vs_wide_data_format.png" alt="Table Structure" data-preview-image>
+            </section>
+            <section>
+                <img class="r-stretch" src="images/example_table_data_structure_lsb.jpg" alt="Table Structure" data-preview-image>
+            </section>
+        </section>
+
+        <section>
+            <h3>Tools for Data Visualisation</h3>
+            <ul>
+                <li>Excel</li>
+                <li>Tableau</li>
+                <li>Power BI</li>
+                <li>Looker Studio</li>
+                <li>R: ggplot2, plotly, leaflet, shiny</li>
+                <li>Python: matplotlib, seaborn, plotly, folium</li>
+                <li>D3.js</li>
+                <li>Vega-Lite</li>
+                <li>Observable: Framework, Plot</li>
+            </ul>
+        </section>
+
+<!--        <section data-background-color="#75E6DA">-->
+<!--            <h1>Do & Don't</h1>-->
+<!--        </section>-->
+
+<!--        <section>-->
+<!--            <h3>Comparison</h3>-->
+
+<!--        </section>-->
+
+        <section>
+            <p>Anatomy of a graph</p>
+            <img class="r-stretch" src="images/graph_anatomy.png" alt="Graph" data-preview-image>
+        </section>
+
+        <section>
+            <p>Encoding</p>
+            <img class="r-stretch" src="images/VisualPropertiesTable.png" alt="encoding" data-preview-image>
+        </section>
+
+        <!--				Data science workflow-->
+        <section data-background-color="#75E6DA">
+            <h1>
+                <span style="background-color: white; color: #75E6DA">Data Processing </span>
+                <span class="r-fit-text" style="background-color: #189ab4; color: white">Workflow</span>
+            </h1>
+        </section>
+        <section>
+            <h1 class="r-fit-text">A typical data science workflow</h1>
+            <img src="images/tidy_r_workflow.png" alt="tidy_r_workflow" class="r-stretch" id="tidy-r-workflow"
+            data-preview-image>
+            <p style="font-size: medium">Hadley Wickham, Mine Çetinkaya-Rundel, and Garrett Grolemund.
+                R for data science (2e)</p>
+        </section>
+        <!--				Meme: When creating a graph-->
+        <section>
+            <p>When creating a graph</p>
+            <img src="images/running%20away%20balloon.jpg" alt="running away balloon">
+        </section>
+        <section data-background-color="#75E6DA">
+            <h1>Data Visualisation Review and Best Practices</h1>
+        </section>
+        <!--				Example: 1-->
+        <section>
+            <section>
+                <img src="images/Bush_cuts2.png" alt="Bush cuts" data-preview-image>
+            </section>
+            <section>
+                <div style="min-height:428px" id="datawrapper-vis-2VV3u">
+                    <script type="text/javascript" defer src="https://datawrapper.dwcdn.net/2VV3u/embed.js"
+                            charset="utf-8" data-target="#datawrapper-vis-2VV3u"></script>
+                    <noscript><img src="https://datawrapper.dwcdn.net/2VV3u/full.png" alt=""/></noscript>
+                </div>
+            </section>
+        </section>
+
+<!--        <section>-->
+<!--            <img class="r-stretch" src="images/sample_from_MPT.png" alt="sample_from_MPT" data-preview-image>-->
+<!--        </section>-->
+
+        <section>
+            <section>
+                <img class="r-stretch" src="images/Sample_table_MPT.png" alt="sample_from_MPT" data-preview-image>
+            </section>
+            <section>
+                <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQy0T5HF2p3_bHzDaAC_EiKpYhOZ32UpzXt2D5_CkJq0NvWcCviFvAfHBop6NUTgrAgEbsJC4kSSlFt/pubhtml?gid=1695570648&amp;single=true&amp;widget=true&amp;headers=false"
+                        width="940" height="540"></iframe>
+                <a style="font-size: medium"
+                   href="https://docs.google.com/spreadsheets/d/1zbGl_GxM7uhXFdpeV-LCEah_58TaJbX0W_dyPdPkVVE/edit?usp=sharing"
+                   data-preview-link>
+                    <p>Click here to see the data</p>
+                </a>
+            </section>
+            <section>
+                <iframe title="Mobile Board Band Survey (Satisfaction)" aria-label="Stacked Bars" id="datawrapper-chart-sXOCW" src="https://datawrapper.dwcdn.net/sXOCW/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="383" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r,i=0;r=e[i];i++)if(r.contentWindow===a.source){var d=a.data["datawrapper-height"][t]+"px";r.style.height=d}}}))}();
+            </script>
+            </section>
+        </section>
+
+
+        <!--				Showcasing some examples of data visualisation-->
+        <section data-background-color="#75E6DA">
+            <h1>
+                Showcasing some examples of data visualisation
+            </h1>
+        </section>
+        <section>
+            <section data-background-iframe="https://nipn-dashboard.web.app/index.html"
+            data-background-interactive></section>
+            <section data-background-iframe="https://observablehq.com/embed/@douangtavanh/arc-diagram-covid-19-cases-in-laos?cell=*"
+            data-background-interactive></section>
+            <section data-background-iframe="https://observablehq.com/embed/@douangtavanh/visualization-covid-19-vaccination-data-laos?cell=*"
+            data-background-interactive></section>
+            <section data-background-iframe="https://vxconnectlaos.web.app/xkh.html"
+            data-background-interactive></section>
+        </section>
+
+        <section data-background-color="#75E6DA">
+            <h1>Hand-on exercise</h1>
+        </section>
+
+        <section>
+            <section>
+                <h1>#1 University Admission and Admission</h1>
+            </section>
+            <section>
+                <img class="r-stretch" src="images/university_admission.jpg" alt="university_admission"
+                data-preview-image>
+                <p style="font-size: medium">
+                    <a href="https://www.facebook.com/laotiantimes/posts/pfbid02vCpFxejnfDBZixTuPoG5jikDYvzGwABYEtaqapDZYstzQ8r9zMrNQqYKVcvLVzuCl?rdid=79BoJEclY1TpqI3g">
+                        data source: The Laotian Times</a>
+            </section>
+
+            <section>
+                <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRswy0Rcsv_2cXnWQSE05Bh1-DU-cAUKtyAYXS0o8bTUpM8JoGowWO3Bi2dbPUfZ3AAoy8N1ybmV9PM/pubhtml?widget=true&amp;headers=false"
+                        width="940" height="540"></iframe>
+                <a style="font-size: medium"
+                   href="https://docs.google.com/spreadsheets/d/12T3qey1Seu-S8B34ZT_b5I76egOQxD1yWzzTc5ED9Ag/edit?usp=sharing"
+                   data-preview-link>
+                    <p>Click here to see the data</p>
+                </a>
+                <p style="font-size: medium">
+                    <a href="https://www.facebook.com/share/p/Ffxe3y4WxYKjbUEb/">
+                        data source: ໜັງສືພິມລາວພັດທະນາ Laophattana News</a>
+            </section>
+
+            <section>
+                <iframe title="Examinees and Admission Quota" aria-label="Grouped Columns" id="datawrapper-chart-XZkW5" src="https://datawrapper.dwcdn.net/XZkW5/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="626" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();</script>
+            </section>
+
+            <section>
+                <iframe title="Percentage of exceeded examinees to admission quota" aria-label="Column Chart" id="datawrapper-chart-awPaT" src="https://datawrapper.dwcdn.net/awPaT/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="456" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();</script>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h1>#2 Choosing an operator for Fiber Internet</h1>
+            </section>
+            <section>
+                <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSkBA2-s0HLb1eTLfgBH2JLZowxvfQAoR6x8sB47WV4JmgvDqJTLx7_IOeCxB-pVtEiAAGwk2fMZ4G0/pubhtml?widget=true&amp;headers=false"
+                        width="940" height="540"></iframe>
+                <a style="font-size: medium"
+                   href="https://docs.google.com/spreadsheets/d/1NUIWNmHmAwPmpk2t2QtJvwsS8Sf-C-eNdETNK5NDqj4/edit?usp=sharing"
+                   data-preview-link>
+                    <p>Click here to see the data</p>
+                </a>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h1>
+                    #3 Air Quality Index in Laos (UNICEF Project)
+                </h1>
+            </section>
+
+            <section data-background-iframe="https://www.airgradient.com/map/?zoom=5&lat=14.912&long=104.551&org=ag&meas=pm02">
+            </section>
+
+            <section>
+                <a href="https://colab.research.google.com/drive/1yLtB6yI7ELYuKYEC3R-fouThcTGDYxPg?usp=sharing">🔗 Jupyter Notebook</a>
+            </section>
+
+            <section>
+                <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRGkleKdivHyeZIP2p0yiyEc10TfxgqbFomIhR_2bnNyqNryxiUMovpGm9Zv1HmzjBtb2aqXFl0JXCj/pubhtml?widget=true&amp;headers=false"
+                        width="940" height="540"></iframe>
+                <a style="font-size: medium"
+                   href="https://docs.google.com/spreadsheets/d/1kl4R-aXzJVcQ_a2302977XGygf8TVup-Zo4GWe_IAJ4/edit?usp=sharing"
+                   data-preview-link>
+                    <p>Click here to see the data</p>
+                </a>
+            </section>
+
+            <section>
+                <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQNGi_Uslk_ndFgS9ojF2s2--0eTGYglogrUgrVJGAYVuDvQ_FvyJZir12IRGcdqcnnbEbDb8MZ-MDZ/pubhtml?widget=true&amp;headers=false"
+                        width="940" height="540"></iframe>
+                <a style="font-size: medium"
+                   href="https://docs.google.com/spreadsheets/d/1KCEoUaVizYtc0oswkhj_Rzn1XpRd-GFrfI_RjAOcNMs/edit?usp=sharing"
+                   data-preview-link>
+                    <p>Click here to see the data</p>
+                </a>
+            </section>
+
+
+        </section>
+
+        <!--				References-->
+        <section data-background-color="#75E6DA">
+            <h1>
+                References
+            </h1>
+        </section>
+        <section>
+            <h3>References</h3>
+            <ol>
+                <li>
+                    <a href="https://material.io/design/communication/data-visualization.html">
+                        Data visualisation | Material Design
+                    </a>
+                </li>
+                <li>
+                    Stephen Few, (2007). Save the pie for the dessert.
+                </li>
+                <li>
+                    <a href="https://mschermann.github.io/data_viz_reader">
+                        Michael Schermann, A reader on Data Visualization.
+                    </a>
+                </li>
+                <li>
+                    Trina Chiasson, Dyanna Gregory, et al.
+                    Data + Design: A Simple Introduction to Preparing Data for Visualization.
+                </li>
+                <li>
+                    Noah Iliinsky. Chosing visual properties for successful visualizations.
+                </li>
+                <li>
+                    <a href="https://www.sap.com/documents/2022/01/5e49ac93-127e-0010-bca6-c68f7e60039b.html">SAP Analytics Cloud - Data Visualization Handbook</a>
+                </li>
+
+            </ol>
+        </section>
+        <!--				Thank you-->
+        <section>
+            <h1 class="r-fit-text">
+                Thank you for joining the workshop!
+            </h1>
+        </section>
+
+    </div>
+</div>
+
+<script src="dist/reveal.js"></script>
+<script src="plugin/notes/notes.js"></script>
+<script src="plugin/markdown/markdown.js"></script>
+<script src="plugin/highlight/highlight.js"></script>
+<script>
+    // More info about initialization & config:
+    // - https://revealjs.com/initialization/
+    // - https://revealjs.com/config/
+    Reveal.initialize({
+        hash: true,
+        slideNumber: 'c/t',
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+    });
+</script>
+</body>
+</html>
